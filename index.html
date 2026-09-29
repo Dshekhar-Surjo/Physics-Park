@@ -10,11 +10,11 @@
 html,body{height:100%;background:var(--ink);color:var(--text);font-family:var(--display);margin:0}
 *{box-sizing:border-box}
 #app{position:fixed;inset:0;overflow:hidden;background:var(--ink)}
-#stage{position:absolute;inset:0}
+#stage{position:absolute;inset:0;z-index:1}
 #stage canvas{display:block;width:100%;height:100%;touch-action:none}
-#cam{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
+#cam{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;z-index:0}
 body.cam #cam{display:block}
-#ui{position:absolute;inset:0;pointer-events:none;display:flex;flex-direction:column;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+#ui{position:absolute;inset:0;z-index:2;pointer-events:none;display:flex;flex-direction:column;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
 #top{display:flex;align-items:center;gap:8px;padding:10px 16px 6px}
 #top>*{pointer-events:auto}
 .brand{font-weight:700;font-size:15px;margin-right:auto;text-shadow:0 1px 6px rgba(0,0,0,.5)}
